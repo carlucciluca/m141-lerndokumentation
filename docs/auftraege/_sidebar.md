@@ -11,3 +11,7 @@
   * [Performance und Indexing](/auftraege/performance_indexing.md)
 * MongoDB:
   * [MongoDB Installation/Konfiguration](/auftraege/MongoDB_installation_konfiguration.md)
+  * [Übung - Erste Schritte mit MongoDB](/auftraege/MongoDB_erste_schritte.md)
+  * [MongoDB-Benutzer](/auftraege/MongoDB_user.md)
+  * [Command-Line Fun](/auftraege/command_line_fun.md)
+  * [Import/Export/Backup/Restore/Queries](/auftraege/MongoDB_import_export_backup_restore_queries.md)

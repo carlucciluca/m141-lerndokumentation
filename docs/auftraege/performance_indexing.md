@@ -22,7 +22,7 @@
    * Bei SQL-Joins vorsichtig sein (nur die Tabellen einbeziehen, die auch nötig sind) und auch nur Daten ausgeben, die nötig sind (keine “Select *“).
 
 6. **MySQL Query Caching aktivieren:**  
-   Caching von Abfragen nutzen (wird von MySQL unterstützt).
+   Caching von Abfragen nutzen (wird nur bis MySQL 5.7 unterstützt).
 
 ## Übung
 

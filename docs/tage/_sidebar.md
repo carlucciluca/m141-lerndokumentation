@@ -7,3 +7,5 @@
 * [Tag 7](/tage/tag7.md)
 * [Tag 8](/tage/tag8.md)
 * [Tag 9](/tage/tag9.md)
+* [Tag 10](/tage/tag10.md)
+* [Tag 11](/tage/tag11.md)

@@ -1,36 +1,48 @@
 # MongoDB Installation/Konfiguration
 
-## Allgemein
+## Recherche zu MongoDB
 
-* Vor- und Nachteile von NoSQL-Datenbanken (respektive MongoDB)
-* Anwendungen von MongoDB
-* Hersteller und Lizenzen zu MongoDB
+* **Hersteller**  
+  Diese Software wurde von MongoDB, Inc. entwickelt und 2009 veröffentlicht.
 
-NoSQL = Not only SQL -> Nicht-relationales DBMS
+* **Lizenzen**  
+  * Server Side Public License (SSPL)
+  * GNU APGL v3.0 (opensource)
 
-Speichert Einträge nicht in Zeilen und Spalten, sondern in DOkumente, welche in BSON beschrieben werden. Diese Informaionen können dann als JSON ausgegeben werden.
+  Mehr Details auf der [offiziellen Webseite](https://www.mongodb.com/community/licensing).
 
-Vorteile: flexibel, Dokumente können andere DOkumente enthalten, gute Such-Performance durch indexierung
+* **Support**  
+  MongoDB stellt zu ihrer Software Beratungen, Schulungen und viele weiter Ressourcen und Dokumentationen zur Verfügung. Genaueres wird auf ihrer [offiziellen Webseite](https://www.mongodb.com/support/get-started) beschrieben.
 
-Wann nutzen?
-- Unstrukturierte Daten
-- komplexe datenstrukturen
+* **Software (Features)**  
+  
+  MongoDB ist ein NoSQL-Datenbankmanagementsystem (NoSQL = Not only SQL). Im Vergleich zu MySQL ist es ein nicht-relationales Datenbankmanagementsystem.  
+  Besonders nützlich ist MongoDB bei komplexen Datenstrukturen oder wenn man unstrukturierte Daten speichern möchte. Im Vergleich zu einem RDMS speichert MongoDB die Daten nicht in Tabellen und Zeilen, sondern in Collections und Documents. Folgende Tabelle, zeigt den Vergleich zwischen den Begriffen.
 
-Ebay
-Sega
-Bosch
-etc.
+  | RDBMS       | MongoDB                                                  |
+  |:------------|:---------------------------------------------------------|
+  | Database    | Database                                                 |
+  | Table       | Collection                                               |
+  | Tuple/Row   | Document                                                 |
+  | column      | Field                                                    |
+  | Table Join  | Embedded Documents                                       |
+  | Primary Key | Primary Key (Default key _id provided by MongoDB itself) |
 
-Hersteller (eine Firma)
+  Weitere Vorteile von MongoDB sind: Flexibilität, Documents können andere Documents enthalten und eine gute Such-Performance durch Indexierung.
 
-Lizenz:
-GNU APGL v3.0 (opensource)
-https://www.mongodb.com/community/licensing
+## Voraussetzungen der Installation (VM)
 
-https://www.mongodb.com/why-use-mongodb
+* **Aus welcher Quelle installieren Sie Ihre Software?**  
+  Aus dem Paketmanager mittels ```sudo apt-get install -y mongodb-org```.
 
+* **In welcher Version installieren Sie Ihre Software (und deren Abhängigkeiten)?**  
+```bash
+mongod --version
+```
+  
+MongoDB version: v5.0.8 (Ubuntu)
 
-## Installation
+## Prozess der Installation
 
 1. Key für den Update-Link installieren. Danach sollte die Meldung "OK" erscheinen.
 
@@ -57,23 +69,37 @@ sudo apt upgrade
 sudo apt-get install -y mongodb-org
 ```
 
+5. Danach ist MongoDB installiert und einsatzbereit.
+
 ## Konfiguration
 
-Konfigurations-Datei
+Wir haben für diese Übung keine besondere Konfiguration vorgenommen. Möchte man dies noch tun, kann dies in folgender Datei gemacht werden: ```/etc/mongod.conf```.
 
-/etc/mongod.conf
+## Test der Installation
 
+1. MongoDB Shell öffnen:
+```bash
+mongosh
+```
 
-Datenbank erstellen
+2. Test-Datenbank erstellen:
+```sql
 use testdb
+```
 
-Collection erstellen:
+3. Collection erstellen:
+```sql
 db.createCollection("testdb", {capped: true, size:6142800, max: 10000})
+```
 
-Document erstellen
+4. Document erstellen:
+```sql
 db.testdb.insertOne({Name: "Name", Alter: 28, Geschlecht: "männlich"})
+```
 
-Document suchen
+5. Document suchen:
+```sql
 db.testdb.find({Alter: 28})
+```
 
-![Mongosh](../images/mongosh.png "Mongosh")
+![MongoDB Test](../images/mongodb_test.png "MongoDB Test")
