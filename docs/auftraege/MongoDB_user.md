@@ -67,3 +67,10 @@ db.updateUser(
    writeConcern: { <write concern> }
 )
 ```
+
+## Login
+
+```
+mongo --port 27017  --authenticationDatabase \
+"admin" -u "Admin" -p
+```

@@ -5,7 +5,13 @@
 ## Lernziele
 
 Jede/r Lernende:
-* ...
+* ...kann URI-Strings für Datenbank-Verbindungen verwenden
+* ...kann Benutzer erfassen/änderen/entfernen (mit Hilfe von Notizen)
+* ...kann Rollen erfassen/änderen/entfernen (mit Hilfe von Notizen)
+* ...kann an Benutzer Rollen zuweisen/ändern/entfernen (mit Hilfe von Notizen)
+* ...kann die wichtigsten Security Prinzipien, im Umgang mit MongoDB, in eigenen Worten erläutern
+* ...kann eine bestehende Applikation auf eine vorhanden Infrastruktur migrieren (bezgl. MongoDB-
+Konfigurationen)
 
 ## Dokumentationsaufträge
 
