@@ -16,3 +16,6 @@
   * [Import/Export/Backup/Restore/Queries](/auftraege/MongoDB_import_export_backup_restore_queries.md)
   * [MongoDB-Benutzer](/auftraege/MongoDB_user.md)
   * [Anwendung von DB-Benutzern und URIs](/auftraege/anwendung_DB-Benutzern_URIs.md)
+  * [MongoDB Datenbankdesign](/auftraege/MongoDB_datenbankdesign.md)
+  * [Übung - Indexierung und Performance](/auftraege/MongoDB_indexierung_performance.md)
+  * [Übung - Sharding und Replication](/auftraege/MongoDB_sharding_replication.md)
