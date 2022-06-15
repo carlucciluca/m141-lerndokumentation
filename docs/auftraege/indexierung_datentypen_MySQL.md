@@ -109,9 +109,23 @@ Für jede Tabelle ist nur ein Primary Key möglich. Dieser ist typischerweise ei
 
 Der Index-Typ Unique sorgt dafür, dass ein Wert innerhalb einer Spalte einzigartig ist. Im Gegensatz zum Primary Key sind mehrere Spalten des Typs Unique in einer Tabelle möglich. Dies könnte man z.B. für eine Spalte E-Mail Adresse verwenden, da diese für jeden Benutze einzigartig sein muss.
 
+Beispiel:
+
+```
+CREATE UNIQUE INDEX index_name
+ON table_name (column1, column2, ...); 
+```
+
 ### Index
 
 Spalten, die mit Index gekennzeichnet sind, erlauben auch doppelte Werte in dieser Spalte.
+
+Beispiel:
+
+```
+CREATE INDEX index_name
+ON table_name (column1, column2, ...); 
+```
 
 ### Fulltext
 

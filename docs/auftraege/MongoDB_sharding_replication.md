@@ -2,6 +2,19 @@
 
 ## Replication
 
+Das Prinzip der Replication ist es, dass es eine Gruppe von Mongod-Instanzen gibt, die denselben Datensatz verwalten. Ein "Replica set" enthält mehrere Datentragende Knoten (Nodes) und optional auch einen Arbiter Knoten. Von den Datentragende Knoten kann immer nur einer der primäre Knoten (Primary Node) sein. Die anderen sind sekundäre Knoten (Secondary Nodes).
+
+![Replication](../images/replication.svg "Replication")
+
+Wenn der primäre Knoten länger als die konfigurierte Zeit (standardmässig 10 Sekunden) kein Signal an die anderen Knoten abgibt, wird ein anderer Knoten zum primären Knoten aufgestuft. Somit wird bei einem Ausfall des primären Knotens automatisch ein anderer eingesetzt.
+
+![Replication Failover](../images/replication_failover.svg "Replication Failover")
+
+Schreib Befehle werden immer auf den primären Knoten ausgeführt, da dieser auf die anderen repliziert wird. Es ist allerdings möglich, dass Lese-Befehle auf andere Knoten umgeleitet werden. Dadurch sind die Daten eventuell nicht aktuell, da sie nicht direkt vom primären Knoten stammen. Dafür ist die Verfügbarkeit erhöht und kann ausserdem die Performance steigern, wenn die Abfragen auf verschiedene Nodes verteilt werden.
+Um diese nutzen zu Können, müssen die [Read Preferences](https://www.mongodb.com/docs/manual/core/read-preference/) konfiguriert werden.
+
+![Replication Read Preference](../images/replication_read_preference.svg "Replication Read Preference")
+
 ### Vorbereitung
 
 Testverzeichnis für Replication erstellen:
@@ -102,7 +115,22 @@ Die einzelnen Nodes konnten nacheinander deaktiviert werden. Danach konnte die M
 
 ## Sharding
 
-Bei diesem Auftrag wird das Sharding mit MongoDB eingerichtet. Dabei wird folgende Installation aufgebaut:
+Das Sharding ermöglicht es, Daten auf verschiedene Shards aufzuteilen. So laufen die Anfragen nicht alle auf dem gleichen Knoten, sondern werden ja nach benötigten Daten von verschiedenen Knoten verarbeitet.
+
+Beim Sharding besteht die Infrastruktur aus folgenden Komponenten:
+
+* **Config-Server:**  
+  Hier wird definiert, welche Daten von welchem Shard verwaltet werden sollen.
+
+* **Router:**  
+  Der Router nimmt die Anfragen und routet diese entsprechend der Konfiguration des Config-Servers an die einzelnen Shards.
+
+* **Shards:**  
+  Die Shards sind einzelne MongoDB-Instanzen, welche die ihren zugeteilten Daten verwalten und den Anfragen entsprechend bearbeiten.
+
+![Sharding](../images/sharding.svg "Sharding")
+
+Bei folgendem Auftrag wird das Sharding mit MongoDB eingerichtet. Dabei wird folgende Installation aufgebaut:
 
 ![Sharding Aufbau](../images/sharding_aufbau.png "Sharding Aufbau")
 

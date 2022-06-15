@@ -113,6 +113,11 @@ Das CAP-Theorem besagt, dass in einem verteilten System maximal zwei der folgend
 
 ![CAP-Theorem](../images/CAP_theorem.jpeg "CAP-Theorem")
 
+## Referenzielle Integrität
+
+1. Datensätze, welche einen Fremdschlüssel enthalten, können nur dann erstellt werden, wenn der referenzierte Datensatz bereits besteht.
+2. Datensätze, welche über ihren Primärschlüssel in einem anderen Datensatz referenziert werden, können nur dann gelöscht werden, wenn kein anderer Datensatz eine Referenz auf diesen gesetzt hat.
+
 ## DBMS beschreiben
 
 Auftrag:  

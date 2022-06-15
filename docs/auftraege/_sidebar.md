@@ -9,6 +9,7 @@
   * [Stored Procedures/Views/Triggers (Sakila)](/auftraege/sakila.md)
   * [Stored Procedures/Views (Chat App)](/auftraege/chat_applikation.md)
   * [Performance und Indexing](/auftraege/performance_indexing.md)
+  * [Übung - Replication bei MySQL](/auftraege/MySQL_replication.md)
 * MongoDB:
   * [MongoDB Installation/Konfiguration](/auftraege/MongoDB_installation_konfiguration.md)
   * [Übung - Erste Schritte mit MongoDB](/auftraege/MongoDB_erste_schritte.md)

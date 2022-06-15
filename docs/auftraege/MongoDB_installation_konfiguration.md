@@ -28,7 +28,15 @@
   | Table Join  | Embedded Documents                                       |
   | Primary Key | Primary Key (Default key _id provided by MongoDB itself) |
 
-  Weitere Vorteile von MongoDB sind: Flexibilität, Documents können andere Documents enthalten und eine gute Such-Performance durch Indexierung.
+* **Vorteile:**
+  * Skalierbarkeit
+  * Hochverfügbarkeit
+  * (Such-)Performance
+  * Unstrukturierte Daten können gespeichert werden
+
+* **Nachteile**
+  * Nicht ACID kompatibel.
+  * Keine Abstraktionen -> kaum Optimierung für NoSQL-Engines.
 
 ## Voraussetzungen der Installation (VM)
 

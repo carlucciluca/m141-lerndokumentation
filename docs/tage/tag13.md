@@ -5,7 +5,13 @@
 ## Lernziele
 
 Jede/r Lernende:
-* ...
+* ...kann Replikation bei MySQL in eigenen Worten beschreiben
+* ...kann in eigenen Worten Active/Passive Cluster erklären
+* ...kann in eigenen Worten Active/Read-Pools Cluster erklären
+* ...kann die Anwendung von Proxies bei Datenbank-Clustern erklären
+* ...kann verschiedene Proxy-Werkzeuge benennen
+* ...kann eine (vorgegebene) MySQL-Cluster Installation in Betrieb nehmen
+* ...kann eine (vorgegebene) MySQL-Cluster Installation nachvollziehen (bezgl. der Komponenten, bezgl. der Zusammenhänge)
 
 ## Dokumentationsaufträge
 

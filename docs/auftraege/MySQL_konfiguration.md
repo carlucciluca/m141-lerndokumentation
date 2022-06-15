@@ -162,6 +162,12 @@ Ausgabe:
 
 ![Transaktions-Isolation](../images/transaction_isolation.png "Transaktions-Isolation")
 
+Transaktions-Isolation ändern:
+
+```sql
+SET TRANSACTION ISOLATION LEVEL SERIALIZABLE;
+```
+
 **Isolations-Level:**
 
 | Isolationsebene | Dirty Read | Lost Updates | Non-Repeatable Read | Phantom |
